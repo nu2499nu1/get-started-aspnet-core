@@ -168,7 +168,7 @@ public class Startup
     class LoggingHandler : DelegatingHandler
     {
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
-                                                                     System.Threading.CancellationToken cancellationToken)
+         System.Threading.CancellationToken cancellationToken)
         {
             Console.WriteLine("{0}\t{1}", request.Method, request.RequestUri);
             var response = await base.SendAsync(request, cancellationToken);
